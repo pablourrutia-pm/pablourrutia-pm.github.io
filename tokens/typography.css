@@ -1,0 +1,67 @@
+/* ============================================================
+   TYPOGRAPHY — families, scale, weights
+   Two registers, toggled by a [data-mode] flip on a container:
+   - default          → COMMON / Full read (Space Grotesk + Hanken Grotesk,
+                         with Departure Mono for all labels/eyebrows/tags)
+   - data-mode="grid-aware" → grid-aware / TL;DR mode (all Departure Mono)
+   ============================================================ */
+:root {
+  /* ---- Families: COMMON / Full read (default) ---- */
+  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif; /* headings */
+  --font-body:    'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif; /* reading */
+  --font-mono:    'Departure Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace; /* labels, eyebrows, tags */
+  --font-pixel:   'Departure Mono', ui-monospace, monospace;  /* brand lockup / pixel moments */
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold:600;
+  --weight-bold:    700;
+  --weight-black:   800;
+
+  /* ---- Type scale ---- */
+  --text-mega:    60px;  /* hero */
+  --text-display: 42px;  /* section openers */
+  --text-h1:      34px;
+  --text-title:   27px;  /* case-study title */
+  --text-h2:      22px;
+  --text-h3:      18px;
+  --text-body:    17px;  /* reading size */
+  --text-body-sm: 15px;
+  --text-label:   13px;  /* mono uppercase eyebrow */
+  --text-caption: 12px;
+
+  /* ---- Line heights ---- */
+  --leading-tight:  1.02;
+  --leading-snug:   1.12;
+  --leading-normal: 1.45;
+  --leading-relaxed:1.55;
+
+  /* ---- Tracking ---- */
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-label:  0.08em;
+  --tracking-wide:   0.14em;
+}
+
+/* ============================================================
+   GRID-AWARE / SIMPLE mode — everything goes monospaced pixel.
+   Apply data-mode="grid-aware" (or class .grid-aware) to a container
+   (or <html>) and all three font roles collapse to Departure Mono.
+   ============================================================ */
+[data-mode="grid-aware"],
+.grid-aware {
+  --font-display: 'Departure Mono', ui-monospace, monospace;
+  --font-body:    'Departure Mono', ui-monospace, monospace;
+  --font-mono:    'Departure Mono', ui-monospace, monospace;
+  /* mono needs a touch more air + gentler display sizes */
+  --text-mega:    44px;
+  --text-display: 34px;
+  --text-title:   24px;
+  --leading-tight:  1.08;
+  --leading-snug:   1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.6;
+  --tracking-tight: 0;
+  --tracking-label: 0.04em;
+}

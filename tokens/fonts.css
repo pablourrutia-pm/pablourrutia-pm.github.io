@@ -1,0 +1,20 @@
+/* ============================================================
+   FONTS — webfont declarations
+   - DEPARTURE MONO (Helena Zhang, SIL OFL) is the brand's signature
+     monospaced PIXEL face: every mono label/eyebrow/tag in the Full read,
+     AND the entire GRID-AWARE / TL;DR low-consumption mode (where display +
+     body collapse to it too — see typography.css). Real font, referenced
+     from a jsdelivr woff2 — swap to a project-hosted copy for production.
+   - COMMON / Full read → Space Grotesk (display) + Hanken Grotesk (body),
+     Google Fonts. Hanken is a flagged substitute for the portfolio's body
+     sans. (Space Mono is intentionally NOT used — Departure Mono owns mono.)
+   ============================================================ */
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2409-1@1.0/DepartureMono-Regular.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
