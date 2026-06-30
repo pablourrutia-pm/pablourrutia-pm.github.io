@@ -1,0 +1,27 @@
+/* ============================================================
+   RADIUS & ELEVATION
+   The portfolio is mostly flat. Two radius worlds:
+   - GRID-AWARE: circular controls (back buttons, pills), square data blocks
+   - EDITORIAL: soft-rounded device mockups & cards
+   ============================================================ */
+:root {
+  --radius-none: 0;        /* timeline data blocks, hard editorial rules */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;     /* phone / device mockup frame */
+  --radius-pill: 999px;    /* back buttons, tag chips, toggles */
+
+  /* ---- Shadows (light/editorial only — dark stays flat) ---- */
+  --shadow-card:   0 1px 3px rgba(10,10,10,0.08), 0 8px 24px rgba(10,10,10,0.06);
+  --shadow-device: 0 18px 48px rgba(10,10,10,0.18);
+
+  /* ---- Accent glow (used softly on hover of orange controls) ---- */
+  --glow-accent: 0 0 0 transparent;          /* @kind shadow */ /* off by default */
+  --glow-accent-on: 0 6px 22px rgba(233,99,26,0.34); /* @kind shadow */
+
+  /* ---- Borders ---- */
+  --border-dark:  1px solid var(--hairline-dark);
+  --border-paper: 1px solid var(--grey-200);
+  --rule-dashed:  1px dashed var(--rule);
+}
